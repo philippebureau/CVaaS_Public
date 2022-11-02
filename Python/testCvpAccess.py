@@ -1,5 +1,6 @@
 #!/usr/bin/python
 ###### README ######
+# This can be used to test API and service token access to CVP on-prem
 # THIS SCRIPT REQUIRED CVPRAC MODULE
 # DOWNLOAD LOCATION: https://github.com/aristanetworks/cvprac
 
