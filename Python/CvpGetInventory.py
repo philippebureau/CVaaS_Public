@@ -20,8 +20,11 @@ token = '<token>'
 #SET YOUR CVP HOSTNAME OR IP
 CVP = 'CVP'
 ####
+compiled_result = 'DEVICE: STREAMING STATUS'
 
 clnt = CvpClient()
 clnt.connect(nodes=[CVP], username='', password='', api_token=token)
-result = clnt.api.get_cvp_info()
-print (result)
+result = clnt.api.get_inventory()
+for hostname in result:
+    compiled_result = compiled_result + "\n" + hostname['hostname'] + ": " + hostname['streamingStatus']
+print (compiled_result)
